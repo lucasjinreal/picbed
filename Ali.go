@@ -14,9 +14,10 @@
 package picbed
 
 import (
-	"github.com/jinfagang/picbed/tools"
-	"github.com/jinfagang/picbed/common"
 	_ "encoding/json"
+
+	"github.com/jinfagang/picbed/common"
+	"github.com/jinfagang/picbed/tools"
 )
 
 type Ali struct {
@@ -55,8 +56,8 @@ func (s *Ali) Upload(image *ImageParam) (ImageReturn, error) {
 	j := common.AliResp{}
 	j.UnmarshalJSON([]byte(data))
 	return ImageReturn{
-		Url: j.Url,
-		ID:  11,
-	},
+			Url: j.Url,
+			ID:  11,
+		},
 		nil
 }
