@@ -6,7 +6,7 @@ Pic bed in golang. This golang package consist all open picture bed uploading AP
 
 Projects using PicBed:
 
-- dingo: http://jinfagang/dingo
+- dingo: http://github.com/jinfagang/dingo
 
 
 
