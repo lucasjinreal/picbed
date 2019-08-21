@@ -22,8 +22,8 @@ import (
 )
 
 func Create() {
-	a := gormadapter.NewAdapter("mysql", "root:root@tcp(127.0.0.1:3306)/auxpi",true)
-	e := casbin.NewEnforcer("conf/rbac_model.conf", a)
+	a, _ := gormadapter.NewAdapter("mysql", "root:root@tcp(127.0.0.1:3306)/auxpi",true)
+	e, _ := casbin.NewEnforcer("conf/rbac_model.conf", a)
 	err := e.LoadPolicy()
 	if err!=nil {
 		fmt.Println(err)
